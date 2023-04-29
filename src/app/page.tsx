@@ -1,15 +1,30 @@
-import { Suspense } from "react";
-import { NoteList } from "./NoteList";
+import { Flex, Title } from "@tremor/react";
+import Search from "./_component/Search";
+import Image from "next/image";
 
-const Home = () => {
+export default function Home() {
   return (
-    <main>
-      <Suspense fallback={<p>Loading...</p>}>
-        {/* @ts-expect-error Server Component */}
-        <NoteList />
-      </Suspense>
+    <main className="p-2 bg-neutral-100 h-screen">
+      <Search />
+      <Title>注目のシェフ</Title>
+      <Flex justifyContent="start" className="gap-4">
+        <Image
+          alt="image"
+          src="https://placekitten.com/150/250"
+          width={150}
+          height={250}
+          className="rounded-2xl"
+        />
+        <Image
+          alt="image"
+          src="https://placekitten.com/150/250"
+          width={150}
+          height={250}
+          className="rounded-2xl"
+        />
+      </Flex>
+      <Title>話題のレシピ</Title>
+      <Title>シェフ</Title>
     </main>
   );
-};
-
-export default Home;
+}

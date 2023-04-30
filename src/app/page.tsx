@@ -9,7 +9,7 @@ export default function Home() {
       <Search />
       <Title>注目のシェフ</Title>
       <ScrollArea>
-        <Flex justifyContent="start" className="w-[1608px] gap-3">
+        <Flex justifyContent="start" className="gap-3">
           {[...Array(10)].map((_, index) => {
             return (
               <Image
@@ -18,7 +18,7 @@ export default function Home() {
                 src="https://placekitten.com/150/250"
                 width={150}
                 height={250}
-                className="rounded-2xl"
+                className="rounded-2xl shrink-0"
               />
             );
           })}

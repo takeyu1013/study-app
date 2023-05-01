@@ -11,7 +11,7 @@ export default function Menu() {
   return (
     <Grid
       numCols={3}
-      className="fixed bottom-0 left-0 w-screen pb-[calc(env(safe-area-inset-bottom) + 44px)]"
+      className="fixed bottom-0 left-0 w-screen pb-[calc(env(safe-area-inset-bottom)_+_44px)]"
     >
       <Grid className="place-items-center">
         <Icon icon={SearchIcon} />

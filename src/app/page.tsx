@@ -2,6 +2,7 @@ import { Flex, Title } from "@tremor/react";
 import Search from "./_component/Search";
 import Image from "next/image";
 import { ScrollArea } from "./_component/ui/scroll-area";
+import Menu from "./_component/Menu";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       </ScrollArea>
       <Title>話題のレシピ</Title>
       <Title>シェフ</Title>
+      <Menu />
     </main>
   );
 }

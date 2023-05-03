@@ -1,8 +1,8 @@
 "use client";
 
-import { TextInput } from "@tremor/react";
 import { SearchIcon } from "@heroicons/react/solid";
+import { Input } from "./ui/input";
 
 export default function Search() {
-  return <TextInput icon={SearchIcon} placeholder="シェフやレシピを検索" />;
+  return <Input icon={SearchIcon} placeholder="シェフやレシピを検索" />;
 }

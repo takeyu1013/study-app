@@ -2,17 +2,18 @@
 
 import { cn } from "@/lib/utils";
 import { InputHTMLAttributes, forwardRef, useRef, useState } from "react";
+import { mergeRefs } from "react-merge-refs";
 
 type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   icon?: React.ElementType;
 };
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, icon: Icon, ...props }) => {
+  ({ className, type, icon: Icon, ...props }, ref) => {
     const [isFocused, setIsFocused] = useState(false);
-    const ref = useRef<HTMLInputElement>(null);
+    const inputRef = useRef<HTMLInputElement>(null);
     const handleFocusChange = (isFocused: boolean) => {
-      const { current } = ref;
+      const { current } = inputRef;
       if (!current) return;
       if (isFocused === false) {
         current.blur();
@@ -45,7 +46,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         <input
           className="w-full focus:outline-none focus:ring-0 bg-transparent pl-4 pr-4 py-2 font-medium border-0 placeholder:text-gray-500"
           type={type}
-          ref={ref}
+          ref={mergeRefs([inputRef, ref])}
           {...props}
         />
       </div>

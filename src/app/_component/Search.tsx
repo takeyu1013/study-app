@@ -4,5 +4,7 @@ import { SearchIcon } from "@heroicons/react/solid";
 import { Input } from "@/app/_component/ui/input";
 
 export const Search = () => {
-  return <Input icon={SearchIcon} placeholder="シェフやレシピを検索" />;
+  return (
+    <Input type="search" icon={SearchIcon} placeholder="シェフやレシピを検索" />
+  );
 };

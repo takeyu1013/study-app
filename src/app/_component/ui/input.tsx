@@ -1,11 +1,17 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { InputHTMLAttributes, forwardRef, useRef, useState } from "react";
+import {
+  ElementType,
+  InputHTMLAttributes,
+  forwardRef,
+  useRef,
+  useState,
+} from "react";
 import { mergeRefs } from "react-merge-refs";
 
 type InputProps = InputHTMLAttributes<HTMLInputElement> & {
-  icon?: React.ElementType;
+  icon?: ElementType;
 };
 
 const Input = forwardRef<HTMLInputElement, InputProps>(

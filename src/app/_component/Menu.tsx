@@ -7,7 +7,7 @@ import {
 } from "@heroicons/react/outline";
 import { Grid, Icon, Text } from "@tremor/react";
 
-export default function Menu() {
+export const Menu = () => {
   return (
     <Grid numCols={3} className="fixed bottom-0 left-0 w-screen">
       <Grid className="place-items-center">
@@ -24,4 +24,4 @@ export default function Menu() {
       </Grid>
     </Grid>
   );
-}
+};

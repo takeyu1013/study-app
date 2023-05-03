@@ -1,39 +1,26 @@
-import * as React from "react";
+"use client";
 
 import { cn } from "@/lib/utils";
+import { InputHTMLAttributes, forwardRef, useRef, useState } from "react";
 
-export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {
+type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   icon?: React.ElementType;
-}
+};
 
-function mergeRefs<T>(
-  refs: Array<React.MutableRefObject<T> | React.LegacyRef<T>>
-): React.RefCallback<T> {
-  return (value) => {
-    refs.forEach((ref) => {
-      if (typeof ref === "function") {
-        ref(value);
-      } else if (ref != null) {
-        (ref as React.MutableRefObject<T | null>).current = value;
-      }
-    });
-  };
-}
-
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, icon, ...props }, ref) => {
-    const [isFocused, setIsFocused] = React.useState(false);
-    const inputRef = React.useRef<HTMLInputElement>(null);
+const Input = forwardRef<HTMLInputElement, InputProps>(
+  ({ className, type, icon: Icon, ...props }) => {
+    const [isFocused, setIsFocused] = useState(false);
+    const ref = useRef<HTMLInputElement>(null);
     const handleFocusChange = (isFocused: boolean) => {
+      const { current } = ref;
+      if (!current) return;
       if (isFocused === false) {
-        inputRef.current?.blur();
+        current.blur();
       } else {
-        inputRef.current?.focus();
+        current.focus();
       }
       setIsFocused(isFocused);
     };
-    const Icon = icon;
 
     return (
       <div
@@ -58,7 +45,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         <input
           className="w-full focus:outline-none focus:ring-0 bg-transparent pl-4 pr-4 py-2 font-medium border-0 placeholder:text-gray-500"
           type={type}
-          ref={mergeRefs([ref, inputRef])}
+          ref={ref}
           {...props}
         />
       </div>

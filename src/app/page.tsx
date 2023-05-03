@@ -1,8 +1,8 @@
 import { Flex, Title } from "@tremor/react";
-import Search from "./_component/Search";
 import Image from "next/image";
 import { ScrollArea } from "./_component/ui/scroll-area";
-import Menu from "./_component/Menu";
+import { Menu } from "@/app/_component/Menu";
+import { Search } from "./_component/Search";
 
 export default function Home() {
   return (

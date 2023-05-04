@@ -6,8 +6,8 @@ import {
   ElementType,
   InputHTMLAttributes,
   forwardRef,
+  useReducer,
   useRef,
-  useState,
 } from "react";
 
 type InputProps = InputHTMLAttributes<HTMLInputElement> & {
@@ -16,19 +16,21 @@ type InputProps = InputHTMLAttributes<HTMLInputElement> & {
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, icon: Icon, ...props }, ref) => {
-    const [isFocused, setIsFocused] = useState(false);
     const inputRef = useRef<HTMLInputElement>(null);
+    const [isFocused, handleFocusChange] = useReducer(
+      (_: boolean, isFocused: boolean) => {
+        const { current } = inputRef;
+        if (!current) return isFocused;
+        if (isFocused === false) {
+          current.blur();
+        } else {
+          current.focus();
+        }
+        return isFocused;
+      },
+      false
+    );
     const mergedRef = useMergedRef(ref, inputRef);
-    const handleFocusChange = (isFocused: boolean) => {
-      const { current } = inputRef;
-      if (!current) return;
-      if (isFocused === false) {
-        current.blur();
-      } else {
-        current.focus();
-      }
-      setIsFocused(isFocused);
-    };
 
     return (
       <div

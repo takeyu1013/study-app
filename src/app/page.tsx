@@ -1,4 +1,4 @@
-import { Flex, Title } from "@tremor/react";
+import { Bold, Flex, Text, Title } from "@tremor/react";
 import Image from "next/image";
 import { ScrollArea } from "./_component/ui/scroll-area";
 import { Menu } from "@/app/_component/Menu";
@@ -13,14 +13,20 @@ export default function Home() {
         <Flex justifyContent="start" className="gap-3">
           {[...Array(10)].map((_, index) => {
             return (
-              <Image
-                key={index}
-                alt="image"
-                src="https://placekitten.com/150/250"
-                width={150}
-                height={250}
-                className="rounded-2xl shrink-0"
-              />
+              <div key={index} className="relative shrink-0">
+                <Image
+                  alt="image"
+                  src="https://placekitten.com/150/250"
+                  width={150}
+                  height={250}
+                  className="rounded-2xl"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-b from-transparent to-black rounded-b-2xl">
+                  <Bold className="text-white absolute left-4 bottom-2">
+                    Foo
+                  </Bold>
+                </div>
+              </div>
             );
           })}
         </Flex>

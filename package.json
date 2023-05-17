@@ -20,6 +20,7 @@
     "autoprefixer": "10.4.14",
     "class-variance-authority": "^0.6.0",
     "clsx": "^1.2.1",
+    "drizzle-orm": "^0.25.4",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.2",
     "lucide-react": "^0.217.0",
@@ -31,5 +32,8 @@
     "tailwindcss": "3.3.2",
     "tailwindcss-animate": "^1.0.5",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "drizzle-kit": "0.17.6-76e73f3"
   }
 }

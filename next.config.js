@@ -2,7 +2,7 @@
 const nextConfig = {
   experimental: {
     appDir: true,
-    serverComponentsExternalPackages: ["@tremor/react"],
+    serverComponentsExternalPackages: ["@tremor/react", "better-sqlite3"],
   },
   images: {
     remotePatterns: [

@@ -1,7 +1,7 @@
 "use client";
 
-import { SearchIcon } from "@heroicons/react/solid";
-import { Input } from "@/app/_component/ui/input";
+import { SearchIcon } from "lucide-react";
+import { Input } from "@/app/_component/input";
 
 export const Search = () => {
   return (

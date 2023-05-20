@@ -2,16 +2,11 @@
 
 import { cn } from "@/lib/utils";
 import { useMergedRef } from "@mantine/hooks";
-import {
-  ElementType,
-  InputHTMLAttributes,
-  forwardRef,
-  useReducer,
-  useRef,
-} from "react";
+import { Icon } from "lucide-react";
+import { InputHTMLAttributes, forwardRef, useReducer, useRef } from "react";
 
 type InputProps = InputHTMLAttributes<HTMLInputElement> & {
-  icon?: ElementType;
+  icon?: Icon;
 };
 
 const Input = forwardRef<HTMLInputElement, InputProps>(

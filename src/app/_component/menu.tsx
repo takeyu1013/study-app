@@ -7,7 +7,7 @@ import Link from "next/link";
 export const Menu = () => {
   return (
     <Grid numCols={3} className="fixed bottom-0 left-0 w-screen">
-      <Link href="/">
+      <Link href="/dashboard">
         <Grid className="place-items-center">
           <Icon icon={SearchIcon} />
           <Text>検索</Text>
@@ -19,7 +19,7 @@ export const Menu = () => {
           <Text>お気に入り</Text>
         </Grid>
       </Link>
-      <Link href="/shopping">
+      <Link href="/dashboard/shopping">
         <Grid className="place-items-center">
           <Icon icon={ShoppingCartIcon} className="block" />
           <Text>お買い物</Text>

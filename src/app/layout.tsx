@@ -1,4 +1,3 @@
-import { Menu } from "@/app/_component/menu";
 import "./globals.css";
 
 export const metadata = {
@@ -13,10 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body>
-        {children}
-        <Menu />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

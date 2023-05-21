@@ -3,6 +3,7 @@
 import { HeartIcon, SearchIcon, ShoppingCartIcon } from "lucide-react";
 import { Grid, Icon, Text } from "@tremor/react";
 import Link from "next/link";
+import { signOut } from "next-auth/react";
 
 export const Menu = () => {
   return (
@@ -13,7 +14,12 @@ export const Menu = () => {
           <Text>検索</Text>
         </Grid>
       </Link>
-      <Link href="#">
+      <Link
+        href="#"
+        onClick={() => {
+          signOut();
+        }}
+      >
         <Grid className="place-items-center">
           <Icon icon={HeartIcon} />
           <Text>お気に入り</Text>

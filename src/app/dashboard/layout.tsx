@@ -10,9 +10,7 @@ export default async function Layout({
   children: React.ReactNode;
 }) {
   const session = await getServerSession(authOptions);
-  if (session) {
-    console.log(session.user);
-  } else {
+  if (!session) {
     redirect("/");
   }
 

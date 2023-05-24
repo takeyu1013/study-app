@@ -20,11 +20,11 @@ dependencies:
     specifier: ^1.0.1
     version: 1.0.1(react@18.2.0)
   '@tremor/react':
-    specifier: ^2.7.0
-    version: 2.7.0(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^2.8.2
+    version: 2.8.2(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)
   '@types/node':
-    specifier: 20.2.1
-    version: 20.2.1
+    specifier: 20.2.3
+    version: 20.2.3
   '@types/react':
     specifier: 18.2.6
     version: 18.2.6
@@ -50,8 +50,8 @@ dependencies:
     specifier: 13.4.3
     version: 13.4.3(eslint@8.41.0)(typescript@5.0.4)
   lucide-react:
-    specifier: ^0.220.0
-    version: 0.220.0(react@18.2.0)
+    specifier: ^0.221.0
+    version: 0.221.0(react@18.2.0)
   next:
     specifier: 13.4.3
     version: 13.4.3(react-dom@18.2.0)(react@18.2.0)
@@ -1032,8 +1032,8 @@ packages:
       tslib: 2.5.2
     dev: false
 
-  /@tremor/react@2.7.0(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-dyjdWLzyYdDyKqw7VxXM79rVo9TqP2NXtFqq+1PPkrFIEtGQzZKBICAeQ7BHltvNBx79fpc+N/rUK5HM6bR5IA==}
+  /@tremor/react@2.8.2(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-ncEt2ys/0LZVTeqWAL2pMHzTFRjmAiSh873PjU5TyH+WS6pDn60Ny7jy0SSW1I0KmQsN/uHzdOSdDpga9m2FCQ==}
     peerDependencies:
       react: ^18.0.0
       react-dom: '>=16.6.0'
@@ -1098,11 +1098,11 @@ packages:
   /@types/node-fetch@2.6.4:
     resolution: {integrity: sha512-1ZX9fcN4Rvkvgv4E6PAY5WXUFWFcRWxZa3EW83UjycOB9ljJCedb2CupIP4RZMEwF/M3eTcCihbBRgwtGbg5Rg==}
     dependencies:
-      '@types/node': 20.2.1
+      '@types/node': 20.2.3
       form-data: 3.0.1
 
-  /@types/node@20.2.1:
-    resolution: {integrity: sha512-DqJociPbZP1lbZ5SQPk4oag6W7AyaGMO6gSfRwq3PWl4PXTwJpRQJhDq4W0kzrg3w6tJ1SwlvGZ5uKFHY13LIg==}
+  /@types/node@20.2.3:
+    resolution: {integrity: sha512-pg9d0yC4rVNWQzX8U7xb4olIOFuuVL9za3bzMT2pu2SU0SNEi66i2qrvhE2qt0HvkhuCaWJu7pLNOt/Pj8BIrw==}
 
   /@types/prop-types@15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
@@ -1129,7 +1129,7 @@ packages:
   /@types/ws@8.5.4:
     resolution: {integrity: sha512-zdQDHKUgcX/zBc4GrwsE/7dVdAD8JR4EuiAXiiUhhfyIJXXb2+PrGshFyeXWQPMmmZ2XxgaqclgpIC7eTXc1mg==}
     dependencies:
-      '@types/node': 20.2.1
+      '@types/node': 20.2.3
 
   /@typescript-eslint/parser@5.59.6(eslint@8.41.0)(typescript@5.0.4):
     resolution: {integrity: sha512-7pCa6al03Pv1yf/dUg/s1pXz/yGMUBAw5EeWqNTFiSueKvRNonze3hma3lhdsOrQcaOXhbk5gKu2Fludiho9VA==}
@@ -3366,8 +3366,8 @@ packages:
       es5-ext: 0.10.62
     dev: true
 
-  /lucide-react@0.220.0(react@18.2.0):
-    resolution: {integrity: sha512-bYtGUsLAWBvZu+BzAU/ziP1gzE4LwMEXLnlgSr1yUKEPPalLG77JLd5GdYebOVkpm+GtqRqnp6tEKDX7Bm8ZlQ==}
+  /lucide-react@0.221.0(react@18.2.0):
+    resolution: {integrity: sha512-g99pn2/lBaCEAA0cbi4eaCO+3rY4mSfjCaDlo8Z30F0wk8MXoBXhCR1TaUS9cmNdOP9VGxgUpoB4qMg7/vyC8A==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0
     dependencies:

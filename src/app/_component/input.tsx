@@ -1,62 +1,25 @@
-"use client";
+import * as React from "react"
 
-import { cn } from "@/lib/utils";
-import { useMergedRef } from "@mantine/hooks";
-import { Icon } from "lucide-react";
-import { InputHTMLAttributes, forwardRef, useReducer, useRef } from "react";
+import { cn } from "@/lib/utils"
 
-type InputProps = InputHTMLAttributes<HTMLInputElement> & {
-  icon?: Icon;
-};
+export interface InputProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {}
 
-const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, icon: Icon, ...props }, ref) => {
-    const inputRef = useRef<HTMLInputElement>(null);
-    const [isFocused, handleFocusChange] = useReducer(
-      (_: boolean, isFocused: boolean) => {
-        const { current } = inputRef;
-        if (!current) return isFocused;
-        if (isFocused === false) {
-          current.blur();
-        } else {
-          current.focus();
-        }
-        return isFocused;
-      },
-      false
-    );
-    const mergedRef = useMergedRef(ref, inputRef);
-
+const Input = React.forwardRef<HTMLInputElement, InputProps>(
+  ({ className, type, ...props }, ref) => {
     return (
-      <div
+      <input
+        type={type}
         className={cn(
-          "relative w-full flex items-center min-w-[10rem] focus:outline-none focus:ring-2 bg-white hover:bg-gray-50 text-gray-500 border-gray-300 focus:ring-blue-200 rounded-md border shadow-sm",
-          isFocused && "ring-2",
+          "flex h-10 w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
           className
         )}
-        onFocus={() => {
-          handleFocusChange(true);
-        }}
-        onBlur={() => {
-          handleFocusChange(false);
-        }}
-      >
-        {Icon ? (
-          <Icon
-            className="shrink-0 h-5 w-5 text-gray-400 ml-3.5"
-            aria-hidden="true"
-          />
-        ) : null}
-        <input
-          className="w-full focus:outline-none focus:ring-0 bg-transparent pl-4 pr-4 py-2 font-medium border-0 placeholder:text-gray-500"
-          type={type}
-          ref={mergedRef}
-          {...props}
-        />
-      </div>
-    );
+        ref={ref}
+        {...props}
+      />
+    )
   }
-);
-Input.displayName = "Input";
+)
+Input.displayName = "Input"
 
-export { Input };
+export { Input }

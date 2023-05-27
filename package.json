@@ -30,10 +30,12 @@
     "drizzle-orm": "^0.26.1",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
+    "kysely": "^0.25.0",
     "lucide-react": "^0.221.0",
     "next": "13.4.3",
     "next-auth": "^4.22.1",
     "postcss": "8.4.23",
+    "prisma-kysely": "^1.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.9",
@@ -48,6 +50,7 @@
     "dotenv": "^16.0.3",
     "drizzle-kit": "0.18.1",
     "drizzle-zod": "^0.4.1",
+    "prisma": "^4.14.1",
     "tsx": "^3.12.7"
   }
 }

@@ -1,8 +1,9 @@
-import { env } from "@/env.mjs";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { PrismaClient } from "@prisma/client";
 import { NextAuthOptions } from "next-auth";
 import GithubProvider from "next-auth/providers/github";
+
+import { env } from "@/lib/env.mjs";
 
 const prisma = new PrismaClient();
 

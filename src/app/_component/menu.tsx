@@ -15,8 +15,7 @@ export const Menu = () => {
           <Text>検索</Text>
         </Grid>
       </Link>
-      <Link
-        href="#"
+      <button
         onClick={() => {
           signOut();
         }}
@@ -25,7 +24,7 @@ export const Menu = () => {
           <Icon icon={HeartIcon} />
           <Text>お気に入り</Text>
         </Grid>
-      </Link>
+      </button>
       <Link href="/dashboard/shopping">
         <Grid className="place-items-center">
           <Icon icon={ShoppingCartIcon} className="block" />

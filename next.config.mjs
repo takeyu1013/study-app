@@ -1,12 +1,12 @@
-import "./src/env.mjs";
+import "./src/lib/env.mjs";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
-  experimental: { typedRoutes: true },
   experimental: {
     serverComponentsExternalPackages: ["@tremor/react"],
+    typedRoutes: true,
   },
   images: {
     remotePatterns: [
@@ -18,4 +18,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;

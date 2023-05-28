@@ -48,3 +48,8 @@ model User {
   image         String?
   accounts      Account[]
 }
+
+model Recipe {
+  id   String @id @default(dbgenerated("(uuid())"))
+  name String
+}

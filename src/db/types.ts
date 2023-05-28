@@ -18,6 +18,10 @@ export type Account = {
     id_token: string | null;
     session_state: string | null;
 };
+export type Recipe = {
+    id: Generated<string>;
+    name: string;
+};
 export type User = {
     id: string;
     name: string | null;
@@ -27,5 +31,6 @@ export type User = {
 };
 export type DB = {
     Account: Account;
+    Recipe: Recipe;
     User: User;
 };

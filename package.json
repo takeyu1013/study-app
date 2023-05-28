@@ -25,6 +25,7 @@
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-scroll-area": "^1.0.4",
     "@radix-ui/react-slot": "^1.0.2",
+    "@t3-oss/env-nextjs": "^0.3.1",
     "@tremor/react": "^2.9.1",
     "@types/better-sqlite3": "^7.6.4",
     "@types/node": "20.2.5",
@@ -52,7 +53,6 @@
     "tailwindcss-animate": "^1.0.5",
     "typescript": "5.0.4",
     "undici": "^5.22.1",
-    "znv": "^0.3.2",
     "zod": "^3.21.4"
   },
   "devDependencies": {

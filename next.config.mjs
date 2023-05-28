@@ -7,6 +7,7 @@ const nextConfig = {
   experimental: {
     serverComponentsExternalPackages: ["@tremor/react"],
     typedRoutes: true,
+    serverActions: true,
   },
   images: {
     remotePatterns: [

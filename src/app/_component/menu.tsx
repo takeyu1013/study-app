@@ -1,8 +1,9 @@
 "use client";
 
-import { HeartIcon, SearchIcon, ShoppingCartIcon } from "lucide-react";
-import { Grid, Icon, Text } from "@tremor/react";
 import Link from "next/link";
+
+import { Grid, Icon, Text } from "@tremor/react";
+import { HeartIcon, SearchIcon, ShoppingCartIcon } from "lucide-react";
 import { signOut } from "next-auth/react";
 
 export const Menu = () => {

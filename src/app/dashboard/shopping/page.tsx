@@ -1,4 +1,5 @@
 import { MoreVertical } from "lucide-react";
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,9 +19,7 @@ const Page = () => {
         <DropdownMenuItem>上へ移動する</DropdownMenuItem>
         <DropdownMenuItem>下へ移動する</DropdownMenuItem>
         <DropdownMenuItem>買うものを追加する</DropdownMenuItem>
-        <DropdownMenuItem className="text-[#E54D2E]">
-          リストから削除する
-        </DropdownMenuItem>
+        <DropdownMenuItem className="text-[#E54D2E]">リストから削除する</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

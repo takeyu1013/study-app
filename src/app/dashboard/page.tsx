@@ -1,12 +1,13 @@
-import { Bold, Flex, Title } from "@tremor/react";
 import Image from "next/image";
+
+import { Bold, Flex, Title } from "@tremor/react";
 
 import { ScrollArea } from "@/app/_component/scroll-area";
 import { Search } from "@/app/dashboard/search";
 
 export default function Page() {
   return (
-    <main className="p-2 bg-neutral-100 h-screen">
+    <main className="h-screen bg-neutral-100 p-2">
       <Search />
       <Title>注目のシェフ</Title>
       <ScrollArea>
@@ -21,10 +22,8 @@ export default function Page() {
                   height={250}
                   className="rounded-2xl"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-b from-transparent to-black rounded-b-2xl">
-                  <Bold className="text-white absolute left-4 bottom-2">
-                    Foo
-                  </Bold>
+                <div className="absolute inset-x-0 bottom-0 h-1/3 rounded-b-2xl bg-gradient-to-b from-transparent to-black">
+                  <Bold className="absolute bottom-2 left-4 text-white">Foo</Bold>
                 </div>
               </div>
             );

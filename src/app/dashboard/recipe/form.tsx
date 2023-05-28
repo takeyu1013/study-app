@@ -1,18 +1,12 @@
 "use client";
 
-import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/app/_component/form";
-import { Input } from "@/app/_component/input";
+
 import { Button } from "@/app/_component/button";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/app/_component/form";
+import { Input } from "@/app/_component/input";
 
 const formSchema = z.object({
   name: z.string().min(2).max(50),

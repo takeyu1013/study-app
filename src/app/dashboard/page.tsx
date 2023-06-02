@@ -8,7 +8,7 @@ import { Search } from "@/app/dashboard/search";
 export default function Page() {
   return (
     <main className="h-screen bg-neutral-100 p-2">
-      <Search />
+      <Search placeholder="シェフやレシピを検索" type="search" />
       <Title>注目のシェフ</Title>
       <ScrollArea>
         <Flex justifyContent="start" className="gap-3">

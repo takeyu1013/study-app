@@ -3,8 +3,8 @@
   "root": true,
   "extends": [
     "next/core-web-vitals",
-    "prettier",
-    "plugin:tailwindcss/recommended"
+    "prettier"
+    // "plugin:tailwindcss/recommended"
   ],
   "plugins": ["tailwindcss"],
   "rules": { "@next/next/no-img-element": "off" },
@@ -12,7 +12,5 @@
     "tailwindcss": { "callees": ["cn"], "config": "tailwind.config.mjs" },
     "next": { "rootDir": true }
   },
-  "overrides": [
-    { "files": ["*.ts", "*.tsx"], "parser": "@typescript-eslint/parser" }
-  ]
+  "overrides": [{ "files": ["*.ts", "*.tsx"], "parser": "@typescript-eslint/parser" }]
 }

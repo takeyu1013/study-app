@@ -6,7 +6,7 @@ const nextConfig = {
   poweredByHeader: false,
   experimental: {
     serverComponentsExternalPackages: ["@tremor/react"],
-    typedRoutes: true,
+    // typedRoutes: true,
     serverActions: true,
   },
   images: {

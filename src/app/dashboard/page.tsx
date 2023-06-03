@@ -3,12 +3,12 @@ import Image from "next/image";
 import { Bold, Flex, Title } from "@tremor/react";
 
 import { ScrollArea } from "@/app/_component/scroll-area";
-import { Search } from "@/app/dashboard/search";
+import SearchSection from "@/app/dashboard/search-section";
 
 export default function Page() {
   return (
     <main className="h-screen p-2">
-      <Search placeholder="シェフやレシピを検索" type="search" />
+      <SearchSection />
       <Title>注目のシェフ</Title>
       <ScrollArea>
         <Flex justifyContent="start" className="gap-3">

@@ -25,6 +25,7 @@ export default function SearchSection() {
   const searchParams = useSearchParams()!;
   const { push } = useRouter();
   const [isPending, startTransition] = useTransition();
+  const [timer, setTimer] = useState(setTimeout(() => {}));
   const inputRef = useRef<HTMLInputElement>(null);
 
   return (
@@ -34,25 +35,30 @@ export default function SearchSection() {
         placeholder="シェフやレシピを検索"
         onChange={(event) => {
           startTransition(() => {
-            setTimeout(() => {
-              const {
-                target: { value },
-              } = event;
-              const param = value.trim();
-              console.log("param", param);
-              if (param === "") {
-                push(pathname);
-                return;
-              }
-              const params = new URLSearchParams(searchParams.toString());
-              params.set("q", param);
-              push(pathname + "?" + params.toString());
-            }, 1000);
+            clearTimeout(timer);
+            setTimer(
+              setTimeout(() => {
+                const {
+                  target: { value },
+                } = event;
+                const param = value.trim();
+                console.log("param", param);
+                if (param === "") {
+                  push(pathname);
+                  return;
+                }
+                const params = new URLSearchParams(searchParams.toString());
+                params.set("q", param);
+                push(pathname + "?" + params.toString());
+              }, 1000)
+            );
           });
         }}
         ref={inputRef}
       />
-      {isPending && <div>Loading...</div>}
+      {(isPending || (inputRef.current?.value && inputRef.current?.value !== searchParams.get("q"))) && (
+        <div>Loading...</div>
+      )}
       <List q={searchParams.get("q") || ""} />
     </>
   );

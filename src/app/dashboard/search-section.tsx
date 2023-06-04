@@ -24,6 +24,7 @@ export default function SearchSection() {
   const [isPending, startTransition] = useTransition();
   const [timer, setTimer] = useState(setTimeout(() => undefined));
   const inputRef = useRef<HTMLInputElement>(null);
+  const { current } = inputRef;
 
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -58,7 +59,7 @@ export default function SearchSection() {
         }}
         ref={inputRef}
       />
-      {(isPending || inputRef.current?.value !== q) && <div>Loading...</div>}
+      {(isPending || (current && current.value !== q)) && <div>Loading...</div>}
       <List q={q} />
     </>
   );

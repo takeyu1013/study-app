@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Bold, Flex, Title } from "@tremor/react";
 
 import { ScrollArea } from "@/app/_component/scroll-area";
-import SearchSection from "@/app/dashboard/search-section";
+import SearchSection from "@/app/dashboard/search-section-experimental";
 
 export default function Page() {
   return (

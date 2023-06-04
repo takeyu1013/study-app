@@ -21,12 +21,14 @@ function List({ q }: { q: string }) {
 }
 
 export default function SearchSection() {
-  const pathname = usePathname();
-  const searchParams = useSearchParams()!;
-  const { push } = useRouter();
   const [isPending, startTransition] = useTransition();
-  const [timer, setTimer] = useState(setTimeout(() => {}));
+  const [timer, setTimer] = useState(setTimeout(() => undefined));
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const q = searchParams.get("q") || "";
+  const { push } = useRouter();
 
   return (
     <>
@@ -56,10 +58,8 @@ export default function SearchSection() {
         }}
         ref={inputRef}
       />
-      {(isPending || (inputRef.current?.value && inputRef.current?.value !== searchParams.get("q"))) && (
-        <div>Loading...</div>
-      )}
-      <List q={searchParams.get("q") || ""} />
+      {(isPending || inputRef.current?.value !== q) && <div>Loading...</div>}
+      <List q={q} />
     </>
   );
 }

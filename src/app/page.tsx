@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <main className="flex gap-2 h-screen items-center justify-center">
       <Login />
-      <Button variant="outline">
-        <Link href={"/dashboard"}>ログインせずに始める</Link>
-      </Button>
+      <Link href={"/dashboard"}>
+        <Button variant="outline">ログインせずに始める</Button>
+      </Link>
     </main>
   );
 }
